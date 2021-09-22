@@ -7,41 +7,43 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="petite">
-        <span>petite ration 
-            <span class="fiyat">2</span>$
-        </span>
-        <input type="text">
-    </div>
-    <div id="grosse">
-        <span>grosse ration 
-            <span class="fiyat">8</span>$
-        </span>
-        <input type="text">
-    </div>
-    <div id="epee">
-        <span>epee
-            <span class="fiyat">20</span>$
-        </span>
-        <input type="text">
-    </div>
-    <div id="bouclier">
-        <span>bouclier 
-            <span class="fiyat">15</span>$
-        </span>
-        <input type="text">
-    </div>
-    <div id="potion">
-        <span>potion 
-            <span class="fiyat">5</span>$
-        </span>
-        <input type="text">
-    </div>
-    <div id="sacdetoile">
-        <span>sac de toile 
-            <span class="fiyat">1</span>$
-        </span>
-        <input type="text">
+    <div id="kategoriler">
+        <div>
+            <span>petite ration 
+                <span class="fiyat">2</span>$
+            </span>
+            <input type="text">
+        </div>
+        <div>
+            <span>grosse ration 
+                <span class="fiyat">8</span>$
+            </span>
+            <input type="text">
+        </div>
+        <div>
+            <span>epee
+                <span class="fiyat">20</span>$
+            </span>
+            <input type="text">
+        </div>
+        <div>
+            <span>bouclier 
+                <span class="fiyat">15</span>$
+            </span>
+            <input type="text">
+        </div>
+        <div>
+            <span>potion 
+                <span class="fiyat">5</span>$
+            </span>
+            <input type="text">
+        </div>
+        <div>
+            <span>sac de toile 
+                <span class="fiyat">1</span>$
+            </span>
+            <input type="text">
+        </div>
     </div>
     <div>
         <span>Total:<span id="hesap"></span>$</span>
@@ -56,7 +58,7 @@
 
             var total = 0;
 
-            $("#petite, #grosse, #epee, #bouclier, #potion, #sacdetoile").find("input").each(function(){
+            $("#kategoriler").find("input").each(function(){
                 
                 if(!isNaN($(this).val())){
                     total += $(this).siblings("span").find(".fiyat").text() * $(this).val();
